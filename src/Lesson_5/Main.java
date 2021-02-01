@@ -13,9 +13,17 @@ public class Main {
 //        checkQueen(desk, steps(1, 1, 4));
 //        checkQueen(desk, steps(2, 2, 8));
 //        printDesk(desk);
-        king( desk,0,0,1);
-        printDesk(desk);
+//        king( desk,0,0,1);
+//        printDesk(desk);
+        int res = power(5,5);
+        System.out.println(res);
 
+    }
+    public static int power (int x, int power){
+        while (power!=0){
+            return (x*power(x,power-1));
+        }
+        return 1;
     }
     public static int [][] kingSteps = {
             {0,1},{1,0}
@@ -31,8 +39,8 @@ public class Main {
         int nextY;
         for (int i = 0; i < kingSteps.length - 1; i++) {
 // no ideas
-            if (isPossible(desk, nextX, nextY) && king(desk, nextX, nextY, move + 1))
-                return true;
+//            if (isPossible(desk, nextX, nextY) && king(desk, nextX, nextY, move + 1))
+//                return true;
         }
         desk[y][x] = 0;
         return false;
